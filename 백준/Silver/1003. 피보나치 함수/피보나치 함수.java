@@ -23,8 +23,9 @@ public class Main{
             
             fibonacchi(N);
             
-            sb.append(dp[N][0] + " " + dp[N][1])
-                
+            sb.append(dp[N][0])
+                .append(" ")
+                .append(dp[N][1])
                 .append('\n');
            
         }
