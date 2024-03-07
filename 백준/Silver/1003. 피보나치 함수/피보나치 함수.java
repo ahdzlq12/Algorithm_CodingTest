@@ -11,6 +11,7 @@ public class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         int T = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
         
         while(T-- > 0){
             int N = Integer.parseInt(br.readLine());
@@ -22,8 +23,12 @@ public class Main{
             
             fibonacchi(N);
             
-            System.out.println(dp[N][0] + " " + dp[N][1]);
+            sb.append(dp[N][0] + " " + dp[N][1])
+                
+                .append('\n');
+           
         }
+        System.out.println(sb);
         
         
     }
