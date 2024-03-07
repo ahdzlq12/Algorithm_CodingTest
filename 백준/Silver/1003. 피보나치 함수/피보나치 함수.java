@@ -28,17 +28,17 @@ public class Main{
         
     }
     
-    public static Integer[] fibonacchi(int n){
+   public static Integer[] fibonacchi(int n){
         
-        if(dp[n][0] != null && dp[n][1] != null)
-            return dp[n];
+        if(dp[n][0] == null || dp[n][1] == null){
+					Integer[] firstArr = fibonacchi(n-1);
+	        Integer[] twiceArr = fibonacchi(n-2);
         
-        Integer[] firstArr = fibonacchi(n-1);
-        Integer[] twiceArr = fibonacchi(n-2);
-        
-        dp[n][0] = firstArr[0] + twiceArr[0];
-        dp[n][1] = firstArr[1] + twiceArr[1];
-        
+	        dp[n][0] = firstArr[0] + twiceArr[0];
+	        dp[n][1] = firstArr[1] + twiceArr[1];
+
+				}
+
         return dp[n];
     }
 }
